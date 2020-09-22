@@ -1,4 +1,4 @@
-# Project Name
+# ETF TLT Backtesting
 
 <br/>
 <p align="center">
@@ -6,10 +6,10 @@
     <img src=".github/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Project Name</h3>
+  <h3 align="center">ETF-Backtesting</h3>
 
   <p align="center">
-    Enter a short description for the project here
+    Es sollte der ETF TLT darauf getestet werden, wie der takeprofit aussieht wenn man jeden Freitag einen buy macht und am nächsten Börsen offenenTag wieder verkauft.
     <br/>
     <a href="https://github.com/htl-anichstrasse/template/releases">Releases</a>
     ·
@@ -20,25 +20,22 @@
 </p>
 
 ## About the project
-Enter a description about the project, its history and its goals here.
+<p> Am Beginn der 5ten Klasse ist es die Aufgabe Ziele für das Projekt festzulegen sodass klarer wird was zu erreichen ist</p>
+<h1> Goals </h1>
+<ol>
+  <li>thema</li>
+  <li>Daten aus Internet beziehen</li>
+  <li>herausfinden wann ein Freitag ist sodass gekauft werden kann, Montag für verkauf(oder Dienstag)</li>
+  <li>Kauf / Verkauf schreiben </li>
+  <li>Vizualisierung eines Beispieldepots</li>
+</ol>
 
-## Installation
-
-Enter a step by step explanation for installing this repository on a local machine.
-
-Clone the repository.
-```
-git clone https://github.com/htl-anichstrasse/template.git
-```
-
-Step 2 here
 
 ## Contact
 
 If you have any questions about this project, please feel free to contact us.
 
-Student name 1 here - student@tsn.at<br>
-Student name 2 here - student@tsn.at<br>
+florstaudacher@tsn.at<br>
 HTL Anichstraße - htlinn@tsn.at
 
 <a href="https://htl-anichstrasse.tirol" target="_blank"><img src=".github/logo_background.png" width="180px"></a>
