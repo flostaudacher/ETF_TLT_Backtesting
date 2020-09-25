@@ -28,6 +28,8 @@
   <li>herausfinden wann ein Freitag ist sodass gekauft werden kann, Montag für verkauf(oder Dienstag)</li>
   <li>Kauf / Verkauf schreiben </li>
   <li>Vizualisierung eines Beispieldepots</li>
+  <li>Visualisierung der Prozentuellen Chance auf Erfolg</li>
+  <li>Visualisierung der Trading Historie</li>
 </ol>
 
 
