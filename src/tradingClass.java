@@ -2,31 +2,38 @@
 public class tradingClass {
 	static double availabeMoney = 10000;
 	static int amountOfStockAvailable;
-
+	static double buyValue;
+	static double sellValue;
 	static void buyStock(String arr) {
-		double closingValue = Double.parseDouble(arr);
-		amountOfStockAvailable = (int) (availabeMoney / closingValue);
-		System.out.println("Kauf: \t\t Anzahl Positionen = "+ amountOfStockAvailable + "\t zu = "+ closingValue);
-		availabeMoney = availabeMoney - amountOfStockAvailable * closingValue;
+		double closingValueBuy = Double.parseDouble(arr);
+		amountOfStockAvailable = (int) (availabeMoney / (closingValueBuy)); // formel wo die Gebühren hin gehören
+		buyValue = closingValueBuy;
+		getValueAtBuy();
+		availabeMoney = availabeMoney - amountOfStockAvailable * (closingValueBuy);
+	}
+
+	public static double getValueAtBuy() {
+		// TODO Auto-generated method stub
+		return buyValue;
 	}
 
 	static void SellStock(String arr) {
-		double closingValue = Double.parseDouble(arr);
-		System.out.println("Verkauf: \t Anzahl Positionen = "+ amountOfStockAvailable + "\t zu = "+ closingValue);
-		availabeMoney = availabeMoney + amountOfStockAvailable * closingValue;
+		double closingValueSell = Double.parseDouble(arr);
+		availabeMoney = availabeMoney + amountOfStockAvailable * (closingValueSell);
+		sellValue = closingValueSell;
+		getValueAtSell();
 		amountOfStockAvailable = 0;
 
 	}
-
-	void calcNewDepotValue () {
-
+	public static double getValueAtSell() {
+		// TODO Auto-generated method stub
+		return sellValue;
 	}
 
 }
 
 
 /*
- Fragen an en Rubi
  =================
  1. Fals Montag oder Freitag börsenfrei sind sollte dann ein anderer Tag zum Tage des trades verwendet werden?
  2. Mit einem Fixen Geldbetrag von anfang an traden und überprüfen ob man am ende einen höheren Betrag hat?
