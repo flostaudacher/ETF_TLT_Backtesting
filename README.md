@@ -30,6 +30,7 @@
   <li>Vizualisierung eines Beispieldepots</li>
   <li>Visualisierung der Prozentuellen Chance auf Erfolg</li>
   <li>Visualisierung der Trading Historie</li>
+  <li>Gebühren einführen</li>
 </ol>
 
 
