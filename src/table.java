@@ -3,15 +3,16 @@ import java.text.DecimalFormat;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.geometry.Insets;
-import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import javafx.util.Callback;
 
 public class table extends Pane{
 	public static TableView<Trade> table = new TableView<Trade>();
@@ -50,6 +51,28 @@ public class table extends Pane{
 		Umsatz.setCellValueFactory(
 				new PropertyValueFactory<Trade ,String>("Umsatz")
 				);
+		Umsatz.setCellFactory(column -> {
+			return new TableCell<Trade, String>() {
+				@Override
+				protected void updateItem(String item, boolean empty) {
+					super.updateItem(item, empty);
+					if (item == null || empty) {
+						setText("");
+						setStyle("");
+					} else {
+						if (item.equals("positiver Trade")) {
+							setTextFill(Color.GREEN);
+							setText("positiver Trade");
+						} else {
+							setTextFill(Color.RED);
+							setText("negativer Trade");
+							setStyle("");
+						}
+					}
+				}
+			};
+		});
+
 		table.setItems(data);
 		table.getColumns().addAll(Datum, Positionen, Kaufpreis, Verkaufspreis,Umsatz);
 		table.minWidth(425);
@@ -64,7 +87,6 @@ public class table extends Pane{
 	public static void fill() {
 
 		for (int Rowc = 1; Rowc < tradingCounter;Rowc++) {
-			System.out.println("liste = "+Backtesting_Main.tableValue[Rowc][0]);
 			data.addAll(new Trade(Backtesting_Main.tableValue[Rowc][0], Backtesting_Main.tableValue[Rowc][1], Backtesting_Main.tableValue[Rowc][2],Backtesting_Main.tableValue[Rowc][3],Backtesting_Main.tableValue[Rowc][4]));
 		}
 	}

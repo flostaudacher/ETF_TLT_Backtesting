@@ -28,8 +28,5 @@ public class vizualizingMethods {
 				data.getData().add(new XYChart.Data<Number, Number>( (double)tradingCounter / 50,tradingClass.availabeMoney));
 			}
 		}
-		System.out.println("positive Trads = "+ PN[0]);
-		System.out.println("anzahl Trads = "+ (double)tradingCounter);
-		System.out.println("Chance for positve Trade = " + f.format((PN[0] / (double)tradingCounter) * 100.0));
 	}
 }

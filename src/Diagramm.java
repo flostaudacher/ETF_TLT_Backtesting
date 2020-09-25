@@ -5,7 +5,6 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.scene.chart.BarChart;
-import javafx.scene.control.TableView;
 
 public class Diagramm extends Application{
 	public void start(Stage primaryStage) throws Exception {
