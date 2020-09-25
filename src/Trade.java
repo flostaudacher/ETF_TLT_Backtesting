@@ -15,23 +15,23 @@ public class Trade {
 		this.Umsatz = new SimpleStringProperty(Umsatz);
 	}
 
-	public SimpleStringProperty getDatum() {
-		return Datum;
+	public String getDatum() {
+		return Datum.get();
 	}
 
-	public SimpleStringProperty getPositionen() {
-		return Positionen;
+	public String getPositionen() {
+		return Positionen.get();
 	}
 
-	public SimpleStringProperty getKaufpreis() {
-		return Kaufpreis;
+	public String getKaufpreis() {
+		return Kaufpreis.get();
 	}
 
-	public SimpleStringProperty getVerkaufpreis() {
-		return Verkaufpreis;
+	public String getVerkaufpreis() {
+		return Verkaufpreis.get();
 	}
 
-	public SimpleStringProperty getUmsatz() {
-		return Umsatz;
+	public String getUmsatz() {
+		return Umsatz.get();
 	}
 }

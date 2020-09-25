@@ -2,6 +2,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.chart.AreaChart;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.scene.chart.BarChart;
 import javafx.scene.control.TableView;
@@ -14,12 +15,12 @@ public class Diagramm extends Application{
 	private void init(Stage primaryStage) {
 		AreaChart<Number, Number> areaChart;
 		BarChart<String, Number> barchart;
-		TableView<Trade> tabelle;
+		VBox tabelle;
 		
 		Stage st = new Stage();
 		FlowPane flowpane = new FlowPane();
 
-		Scene sce = new Scene(flowpane, 2000, 500);
+		Scene sce = new Scene(flowpane, 1500, 500);
 		areaChart = vizualization.areachart();
 		barchart = barChart.Barchart();
 		tabelle = table.tableCreat();
