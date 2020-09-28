@@ -9,7 +9,6 @@ public class vizualization extends Pane {
 
 		NumberAxis xAxis= new NumberAxis();
 		xAxis.setLabel("Years passed");
-
 		NumberAxis yAxis= new NumberAxis();
 		yAxis.setLabel("Depot Value");
 
@@ -19,9 +18,7 @@ public class vizualization extends Pane {
 		XYChart.Series<Number, Number> data = new XYChart.Series<Number, Number>();
 		data.setName("Backtesting result if you try the tactic with 10k in the year 2010");
 
-
 		vizualizingMethods.create(data);
-		
 		areaChart.setCreateSymbols(false);
 		areaChart.getData().add(data);
 		return areaChart;

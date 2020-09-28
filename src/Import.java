@@ -33,12 +33,13 @@ public class Import {
 				for (int x = 0; x < inArr.length; x++) {
 					arr[Rowc][x]=inArr[x];
 				}
-				arr[Rowc][7] = Fridaycheck.checkForFriday(arr[Rowc][0]);
+				arr[Rowc][7] = Fridaycheck.checkForFriday(Rowc);
 				Rowc++;
 			}
 		}catch (Exception e) {
 			System.out.println(e);
-		}	
+		}
+		Fridaycheck.börsenfrei();
 	}
 	/**
 	 * prints our data which was translated to an array to console

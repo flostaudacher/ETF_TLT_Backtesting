@@ -19,7 +19,7 @@ public class Diagramm extends Application{
 		Stage st = new Stage();
 		FlowPane flowpane = new FlowPane();
 
-		Scene sce = new Scene(flowpane, 1500, 500);
+		Scene sce = new Scene(flowpane, 1550, 500);
 		areaChart = vizualization.areachart();
 		barchart = barChart.Barchart();
 		tabelle = table.tableCreat();

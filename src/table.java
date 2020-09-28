@@ -28,26 +28,30 @@ public class table extends Pane{
 		label.setFont(new Font("Arial", 20));
 		table.setEditable(false);
 		calc();
-
-
 		fill();
 		TableColumn Datum = new TableColumn("Datum");
+		Datum.impl_setReorderable(false);
 		Datum.setCellValueFactory(
 				new PropertyValueFactory<Trade ,String>("Datum")
 				);
 		TableColumn Positionen = new TableColumn("Positionen");
+		Positionen.impl_setReorderable(false);
 		Positionen.setCellValueFactory(
 				new PropertyValueFactory<Trade ,String>("Positionen")
 				);
 		TableColumn Kaufpreis = new TableColumn("Kaufpreis");
+		
+		Kaufpreis.impl_setReorderable(false);
 		Kaufpreis.setCellValueFactory(
 				new PropertyValueFactory<Trade ,String>("Kaufpreis")
 				);
 		TableColumn Verkaufspreis = new TableColumn("Verkaufpreis");
+		Verkaufspreis.impl_setReorderable(false);
 		Verkaufspreis.setCellValueFactory(
 				new PropertyValueFactory<Trade ,String>("Verkaufpreis")
 				);
 		TableColumn Umsatz = new TableColumn("Umsatz");
+		Umsatz.impl_setReorderable(false);
 		Umsatz.setCellValueFactory(
 				new PropertyValueFactory<Trade ,String>("Umsatz")
 				);
@@ -75,9 +79,9 @@ public class table extends Pane{
 
 		table.setItems(data);
 		table.getColumns().addAll(Datum, Positionen, Kaufpreis, Verkaufspreis,Umsatz);
-		table.minWidth(425);
+		table.minWidth(510);
 		final VBox vbox = new VBox();
-		vbox.setMinWidth(425);
+		vbox.setMinWidth(510);
 		vbox.getChildren().addAll(label, table);
 
 		return vbox;

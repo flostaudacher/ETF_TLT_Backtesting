@@ -14,7 +14,7 @@ public class barChart extends Pane{
 		xAxis.setCategories(FXCollections.<String>
 		observableArrayList(Arrays.asList("positiv", "negativ")));
 		xAxis.setLabel("Chance");
-
+		
 		NumberAxis yAxis= new NumberAxis();
 		yAxis.setLabel("Chance for positiv/negativ Trade");
 
